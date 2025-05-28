@@ -1,0 +1,213 @@
+/**
+ * DMS Theme Styles
+ * Additional styling for dark and light modes
+ */
+
+/* Specific elements that need additional styling in dark mode */
+[data-theme="dark"] .card-bg,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .chart-card {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .login-form,
+[data-theme="dark"] .form-container {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] table {
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] th {
+    background-color: rgba(30, 41, 59, 0.8);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] tbody tr:nth-child(even) {
+    background-color: rgba(30, 41, 59, 0.4);
+}
+
+[data-theme="dark"] tbody tr:hover {
+    background-color: rgba(30, 41, 59, 0.6);
+}
+
+[data-theme="dark"] .view-group {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .view-label {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .sidebar {
+    background-color: var(--card-bg);
+    border-right-color: var(--border-color);
+}
+
+[data-theme="dark"] .sidebar-header {
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .login-container::before {
+    opacity: 0.2;
+}
+
+[data-theme="dark"] .card1 {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+[data-theme="dark"] .card1 .card-logo {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .card-chip {
+    background: #4a5568;
+}
+
+[data-theme="dark"] .overlay-text {
+    background: rgba(26, 32, 44, 0.95);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .overlay-text h2 {
+    color: var(--primary-color);
+}
+
+/* Force chart colors in dark mode */
+[data-theme="dark"] canvas {
+    filter: brightness(0.8) contrast(1.2);
+}
+
+/* Lighter form elements for dark mode */
+[data-theme="dark"] .form-group label {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background-color: #232c3a !important;
+    color: #f1f5f9 !important;
+    border-color: #334155 !important;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Button styles for dark mode */
+[data-theme="dark"] .btn-secondary {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: #2d3748;
+}
+
+/* Specific fixes for certain components */
+[data-theme="dark"] .toggle-btn,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .theme-toggle-login {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .toggle-btn:hover,
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .theme-toggle-login:hover {
+    color: var(--primary-color);
+    background-color: rgba(74, 85, 104, 0.4);
+}
+
+/* Properly themed toast notifications */
+[data-theme="dark"] .toast {
+    background-color: var(--card-bg);
+}
+
+/* Status indicators in dark mode */
+[data-theme="dark"] .status {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .status.active,
+[data-theme="dark"] .status.completed {
+    color: var(--success-color);
+}
+
+[data-theme="dark"] .status.overdue,
+[data-theme="dark"] .status.failed {
+    color: var(--danger-color);
+}
+
+[data-theme="dark"] .status.pending {
+    color: var(--warning-color);
+}
+
+/* Animations for theme transition */
+.theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Notifications dark mode */
+[data-theme="dark"] .notification-item {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border-left: 3px solid var(--primary-color);
+}
+[data-theme="dark"] .notification-item.unread {
+    background-color: rgba(59,130,246,0.08);
+    border-left: 3px solid var(--primary-color);
+}
+[data-theme="dark"] .notification-item.read {
+    opacity: 0.7;
+}
+[data-theme="dark"] .notification-message {
+    color: var(--text-primary);
+}
+[data-theme="dark"] .notification-meta {
+    color: var(--text-secondary);
+}
+[data-theme="dark"] .notification-empty {
+    color: var(--text-secondary);
+    background: none;
+}
+
+/* Dashboard content and table fixes */
+[data-theme="dark"] .dashboard-content,
+[data-theme="dark"] .table-responsive {
+    background-color: var(--light-bg);
+    color: var(--text-primary);
+}
+[data-theme="dark"] .form-container {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+[data-theme="dark"] .settings-section,
+[data-theme="dark"] .settings-content {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+}
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+    background-color: transparent;
+    color: var(--text-primary);
+}
+[data-theme="dark"] .alert-danger {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-left: 4px solid #f87171;
+}
+[data-theme="dark"] .alert-success {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-left: 4px solid #34d399;
+} 
